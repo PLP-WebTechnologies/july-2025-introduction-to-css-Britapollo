@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Enhanced HTML5 Content & Mastering Forms</title>
+</head>
+<body>
+
+<!-- 
+    SECTION 1: HEADING & INTRO
+        -->
+<header>
+    <h1>HTML5 Content Enhancement & Form Mastery</h1>
+    <p>This page demonstrates how lists, tables, and media can enrich content, 
+    followed by a structured HTML5 form with built-in validation.</p>
+</header>
+
+<!-- 
+    SECTION 2: LISTS
+        -->
+<section>
+    <h2>Favorite Programming Languages</h2>
+    <!-- Ordered list to show ranking -->
+    <ol>
+      <li>Python</li>
+      <li>JavaScript</li>
+      <li>Java</li>
+      <li>R</li>
+      <li>C++</li>
+    </ol>
+
+    <h2>Daily Developer Checklist</h2>
+
+    <!-- Unordered list to show tasks -->
+    
+    <ul>
+      <li>Review pull requests</li>
+      <li>Write clean code</li>
+      <li>Debug and test features</li>
+      <li>Document progress</li>
+    </ul>
+</section>
+
+<!-- 
+    SECTION 3: TABLE
+        -->
+<section>
+    <h2>Weekly Learning Schedule</h2>
+
+    <!-- Table to organize data clearly -->
+    
+    <table border="1" cellpadding="5" cellspacing="0">
+      <thead>
+        <tr>
+          <th>Day</th>
+          <th>Topic</th>
+          <th>Hours</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Monday</td>
+          <td>HTML & CSS</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>Tuesday</td>
+          <td>JavaScript Basics</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>Wednesday</td>
+          <td>APIs & JSON</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>Thursday</td>
+          <td>Databases</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>Friday</td>
+          <td>Projects</td>
+          <td>4</td>
+        </tr>
+      </tbody>
+    </table>
+</section>
+
+<!-- 
+    SECTION 4: MEDIA
+        -->
+<section>
+    <h2>Media Showcase</h2>
+
+    <!-- Image -->
+
+    <figure>
+      <img src="https://via.placeholder.com/400x200" alt="Placeholder Image">
+      <figcaption>A sample project screenshot.</figcaption>
+    </figure>
+
+    <!-- Audio -->
+    
+    <h3>Sample Audio</h3>
+    <audio controls>
+      <source src="sample-audio.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+
+    <!-- Video -->
+    
+    <h3>Sample Video</h3>
+    <video width="400" controls>
+      <source src="sample-video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+</section>
+
+<!-- 
+    SECTION 5: FORM
+        -->
+<section>
+    <h2>Registration Form</h2>
+    <p>Please fill in the form below. All fields marked * are required.</p>
+
+    <!-- Form starts -->
+    
+    <form action="#" method="post" autocomplete="on">
+
+    <!-- Group 1: Personal Info -->
+    
+      <fieldset>
+        <legend>Personal Information</legend>
+
+        <!-- Name field -->
+        
+        <label for="fullname">Full Name *</label><br>
+        <input type="text" id="fullname" name="fullname" 
+               placeholder="Enter your full name" 
+               required minlength="3"><br><br>
+
+        <!-- Email field -->
+        
+        <label for="email">Email *</label><br>
+        <input type="email" id="email" name="email" 
+               placeholder="example@email.com" 
+               required><br><br>
+
+        <!-- Phone with pattern validation -->
+        
+        <label for="phone">Phone Number *</label><br>
+        <input type="tel" id="phone" name="phone" 
+               placeholder="e.g. 0712345678" 
+               required pattern="[0-9]{10}"><br><br>
+
+        <!-- Date of Birth -->
+        
+        <label for="dob">Date of Birth *</label><br>
+        <input type="date" id="dob" name="dob" required><br><br>
+      </fieldset>
+
+      <!-- Group 2: Account Setup -->
+    
+      <fieldset>
+        <legend>Account Setup</legend>
+
+        <!-- Username -->
+        
+        <label for="username">Username *</label><br>
+        <input type="text" id="username" name="username" 
+               placeholder="Choose a username" 
+               required minlength="4"><br><br>
+
+        <!-- Password -->
+        
+        <label for="password">Password *</label><br>
+        <input type="password" id="password" name="password" 
+               placeholder="At least 6 characters" 
+               required minlength="6"><br><br>
+
+        <!-- Gender (radio buttons) -->
+        
+        <label>Gender *</label><br>
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label><br><br>
+
+        <!-- Country (dropdown menu) -->
+        <label for="country">Country *</label><br>
+        <select id="country" name="country" required>
+          <option value="">-- Select your country --</option>
+          <option value="Kenya">Kenya</option>
+          <option value="USA">USA</option>
+          <option value="UK">UK</option>
+          <option value="India">India</option>
+        </select><br><br>
+    </fieldset>
+
+      <!-- Group 3: Preferences -->
+    
+      <fieldset>
+        <legend>Preferences</legend>
+
+        <!-- Newsletter (checkbox) -->
+        
+        <label>
+          <input type="checkbox" name="newsletter" checked>
+          Subscribe to newsletter
+        </label><br><br>
+
+        <!-- Favorite color -->
+        
+        <label for="color">Favorite Color</label><br>
+        <input type="color" id="color" name="color"><br><br>
+
+        <!-- Upload profile picture -->
+        
+        <label for="profile">Upload Profile Picture</label><br>
+        <input type="file" id="profile" name="profile" accept="image/*"><br><br>
+      </fieldset>
+
+      <!-- Submit button -->
+    
+      <input type="submit" value="Register">
+    </form>
+</section>
+
+<!-- 
+    FOOTER
+        -->
+<footer>
+    <p>Assignment by: Brian Apollo </p>
+</footer>
+
+</body>
+</html>
