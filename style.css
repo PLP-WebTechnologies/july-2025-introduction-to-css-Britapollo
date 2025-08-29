@@ -1,0 +1,94 @@
+/* 
+   CSS Basics & The Box Model
+   External Stylesheet
+   */
+
+/* Reset some browser defaults */
+body, h1, h2, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f8f9fa;
+  color: #333;
+  padding: 20px;
+}
+
+/* Header styles */
+.site-header {
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #0077b6;
+  color: white;
+  border-radius: 8px;
+}
+
+/* Navigation styles */
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #0077b6;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  color: #023e8a;
+}
+
+/* Content area */
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+/* Card (box model demo) */
+.card {
+  background-color: #ffffff;
+  border: 2px solid #ccc;     /* border demonstration */
+  padding: 15px;              /* padding demonstration */
+  margin: 5px;                /* margin demonstration */
+  border-radius: 6px;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Highlighted card */
+.highlight {
+  border-color: #0077b6;
+  background-color: #e0f7ff;
+}
+
+/* Button styling */
+.cta-btn {
+  padding: 10px 20px;
+  margin-top: 10px;
+  border: none;
+  background-color: #0077b6;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cta-btn:hover {
+  background-color: #023e8a;
+}
+
+/* Footer styles */
+.site-footer {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+}
